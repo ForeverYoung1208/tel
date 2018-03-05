@@ -1,6 +1,10 @@
 {
-  "application.js": "/packs/application-7b291b8d1af545c43d03.js",
-  "application.js.map": "/packs/application-7b291b8d1af545c43d03.js.map",
-  "hello_react.js": "/packs/hello_react-bac1c0d61f2ea3e3df70.js",
-  "hello_react.js.map": "/packs/hello_react-bac1c0d61f2ea3e3df70.js.map"
+  "app-tel.js": "/packs/app-tel-e0ab613dcd48baabd974.js",
+  "app-tel.js.map": "/packs/app-tel-e0ab613dcd48baabd974.js.map",
+  "hello_react.js": "/packs/hello_react-668d15ad044b40a166c7.js",
+  "hello_react.js.map": "/packs/hello_react-668d15ad044b40a166c7.js.map",
+  "tel_components/MainMenu.js": "/packs/tel_components/MainMenu-70904d909262b9062d1a.js",
+  "tel_components/MainMenu.js.map": "/packs/tel_components/MainMenu-70904d909262b9062d1a.js.map",
+  "tel_components/Pages.js": "/packs/tel_components/Pages-e3f94f630869b4653096.js",
+  "tel_components/Pages.js.map": "/packs/tel_components/Pages-e3f94f630869b4653096.js.map"
 }

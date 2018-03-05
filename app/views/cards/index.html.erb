@@ -1,25 +1,36 @@
-<p id="notice"><%= notice %></p>
 
-<h1>Cards</h1>
+
+<div id='app-tel'></div>
+
+
+<hr/>
+<h1>Html Cards</h1>
+<p id="notice"><%= notice %></p>
 
 <table>
   <thead>
     <tr>
-      <th colspan="3"></th>
+      <th>type</th>
+      <th>name</th>
+      <th>tel</th>
+      <th>email</th>
+      <th>created_at</th>
+      <th>updated_at</th>
+      <th colspan="1"></th>
     </tr>
   </thead>
 
   <tbody>
     <% @cards.each do |card| %>
       <tr>
-        <td><%= link_to 'Show', card %></td>
-        <td><%= link_to 'Edit', edit_card_path(card) %></td>
+        <td><%= card.type %></td>
+        <td><%= card.name %></td>
+        <td><%= card.tel %></td>
+        <td><%= card.email %></td>
+        <td><%= card.created_at %></td>
+        <td><%= card.updated_at %></td>
         <td><%= link_to 'Destroy', card, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
 </table>
-
-<br>
-
-<%= link_to 'New Card', new_card_path %>

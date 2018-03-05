@@ -5,6 +5,12 @@ class CardsController < ApplicationController
   # GET /cards.json
   def index
     @cards = Card.all
+
+    respond_to do |format|
+      format.html { }
+      format.json { }
+    end
+
   end
 
   # GET /cards/1
