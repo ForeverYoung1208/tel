@@ -1,14 +1,6 @@
 import React from 'react'
 import { Switch, Route } from 'react-router-dom';
-
-
-const Cards = (props) => {
-	return(
-		<div>
-			-Cards-here-
-		</div>
-	)
-}
+import { Cards } from './Pages/Cards'
 
 const Links = (props) => {
 	return(

@@ -7,7 +7,7 @@ export default class MainMenu extends React.Component {
 		return(	
 			<div className="container-fluid">
 				<nav className="navbar navbar-expand-sm navbar-light bg-faded">
-				  <Link className="navbar-brand" to="/cards">Tel:</Link>
+				  <Link className="navbar-brand" to="/cards">ITell:</Link>
 				  <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
 				    <span className="navbar-toggler-icon"></span>
 				  </button>
