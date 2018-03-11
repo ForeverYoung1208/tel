@@ -5,12 +5,12 @@ export const Card = (props) => {
 	const card = props.card
 	return(
 		<div className="row card">
-			<div className = "col-lg-8 col-sm-12" >
-				<div className="row"> <span className="col-lg-1"> id: </span> <span>{ card.id }</span> </div>
-				<div className="row"> <span className="col-lg-1"> type: </span> <span>{ card.type }</span> </div>
-				<div className="row"> <span className="col-lg-1"> name: </span> <span>{ card.name }</span> </div>
-				<div className="row"> <span className="col-lg-1"> tel: </span> <span>{ card.tel }</span> </div>
-				<div className="row"> <span className="col-lg-1"> email: </span> <span>{ card.email }</span> </div>
+			<div className = "col-sm-12" >
+				<div className="row"> <span className="col-sm-1 text-sm-right i-label text-nowrap"> id: </span> <span className="col-sm-auto">{ card.id }</span> </div>
+				<div className="row"> <span className="col-sm-1 text-sm-right i-label text-nowrap"> type: </span> <span className="col-sm-auto">{ card.type }</span> </div>
+				<div className="row"> <span className="col-sm-1 text-sm-right i-label text-nowrap"> name: </span> <span className="col-sm-auto">{ card.name }</span> </div>
+				<div className="row"> <span className="col-sm-1 text-sm-right i-label text-nowrap"> tel: </span> <span className="col-sm-auto">{ card.tel }</span> </div>
+				<div className="row"> <span className="col-sm-1 text-sm-right i-label text-nowrap"> email: </span> <span className="col-sm-auto">{ card.email }</span> </div>
 			</div>
 		</div>
 	)

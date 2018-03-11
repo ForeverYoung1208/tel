@@ -27,7 +27,13 @@ export class Cards extends React.Component {
 		return(
 			<div className="container-fluid">
 				<div className="search row">
-					<input/>
+					<div className="col-1">
+						
+					</div>				
+					<div className="col-1">
+						<input/>	
+					</div>
+					
 				</div>
 
 				<div className="cards ">
