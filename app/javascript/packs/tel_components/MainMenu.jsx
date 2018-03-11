@@ -17,7 +17,7 @@ export default class MainMenu extends React.Component {
 				        <NavLink className="nav-link" activeClassName='i-active' to="/cards">Show contacts</NavLink>
 				      </li>
 				      <li className="nav-item">
-				        <NavLink className="nav-link" activeClassName='i-active' to="/links">Useful links</NavLink>
+				        <NavLink className="nav-link" activeClassName='i-active' to="/useful_links">Useful links</NavLink>
 			      </li>
 				    </ul>
 				  </div>
