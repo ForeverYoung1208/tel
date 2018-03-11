@@ -25,16 +25,17 @@ export class Cards extends React.Component {
 
 	render(){
 		return(
+
 			<div className="container-fluid">
 				<div className="search row">
-					<div className="col-1">
-						
+					<div className="input-group mb-3">
+					  <div className="input-group-prepend">
+					    <span className="input-group-text" id="basic-addon1">Cards search</span>
+					  </div>
+					  <input type="text" className="form-control" placeholder="search pattern" aria-label="Username" aria-describedby="basic-addon1"/>
 					</div>				
-					<div className="col-1">
-						<input/>	
-					</div>
-					
 				</div>
+
 
 				<div className="cards ">
 					{ this.state.cards.map( (card, index) => (

@@ -7,7 +7,7 @@
 // To reference this file, add <%= javascript_pack_tag 'application' %> to the appropriate
 // layout file, like app/views/layouts/application.html.erb
 
-console.log('Hello World from Webpacker')
+console.log('Hello from Webpacker & React & Rails & I-tell :) ')
 
 import React from 'react'
 import ReactDOM from 'react-dom'
@@ -32,12 +32,14 @@ class AppTel extends React.Component{
 
 document.addEventListener('DOMContentLoaded', () => {
 	const app = document.getElementById('app-tel')
-	
-	ReactDOM.render(
-		<HashRouter>
-			<AppTel/>
-		</HashRouter>
-		, app);
+
+	if (app){
+		ReactDOM.render(
+			<HashRouter>
+				<AppTel/>
+			</HashRouter>
+			, app);
+	}
 
 })
 
