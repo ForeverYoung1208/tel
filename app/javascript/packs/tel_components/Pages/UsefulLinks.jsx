@@ -8,7 +8,7 @@ export const UsefulLinks = (props) => {
 		<ul className="container-fluid">
 			<li className="row"> <div className="col-sm-auto input-group-text" >UsefulLinks:</div> </li>
 			<li className="row useful-link"> 
-				<div className="col-sm-auto" ><a href="/cards">Cards import from xls</a></div> 
+				<div className="col-sm-auto" ><a href="/admin/cards">Cards management</a></div> 
 			</li>
 
 		</ul>

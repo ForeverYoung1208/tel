@@ -1,16 +1,16 @@
 {
-  "app-tel.js": "/packs/app-tel-a3ac4fcc0412d5d7a0b7.js",
-  "app-tel.js.map": "/packs/app-tel-a3ac4fcc0412d5d7a0b7.js.map",
+  "app-tel.js": "/packs/app-tel-541d6adfb2471c950a97.js",
+  "app-tel.js.map": "/packs/app-tel-541d6adfb2471c950a97.js.map",
   "hello_react.js": "/packs/hello_react-132a8449bd027bb94bea.js",
   "hello_react.js.map": "/packs/hello_react-132a8449bd027bb94bea.js.map",
   "tel_components/MainMenu.js": "/packs/tel_components/MainMenu-0d08760f591985d9efb3.js",
   "tel_components/MainMenu.js.map": "/packs/tel_components/MainMenu-0d08760f591985d9efb3.js.map",
-  "tel_components/Pages.js": "/packs/tel_components/Pages-12d8e6914c11d3bf76da.js",
-  "tel_components/Pages.js.map": "/packs/tel_components/Pages-12d8e6914c11d3bf76da.js.map",
+  "tel_components/Pages.js": "/packs/tel_components/Pages-042f4fbad778373d26f8.js",
+  "tel_components/Pages.js.map": "/packs/tel_components/Pages-042f4fbad778373d26f8.js.map",
   "tel_components/Pages/Cards.js": "/packs/tel_components/Pages/Cards-3fa7c9519dca79ddb78b.js",
   "tel_components/Pages/Cards.js.map": "/packs/tel_components/Pages/Cards-3fa7c9519dca79ddb78b.js.map",
   "tel_components/Pages/Cards/Card.js": "/packs/tel_components/Pages/Cards/Card-820166464879746bd9d7.js",
   "tel_components/Pages/Cards/Card.js.map": "/packs/tel_components/Pages/Cards/Card-820166464879746bd9d7.js.map",
-  "tel_components/Pages/UsefulLinks.js": "/packs/tel_components/Pages/UsefulLinks-4a6c114f1163ab2d5ad8.js",
-  "tel_components/Pages/UsefulLinks.js.map": "/packs/tel_components/Pages/UsefulLinks-4a6c114f1163ab2d5ad8.js.map"
+  "tel_components/Pages/UsefulLinks.js": "/packs/tel_components/Pages/UsefulLinks-e948c7dbc3ee7b49c161.js",
+  "tel_components/Pages/UsefulLinks.js.map": "/packs/tel_components/Pages/UsefulLinks-e948c7dbc3ee7b49c161.js.map"
 }

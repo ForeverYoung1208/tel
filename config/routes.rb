@@ -1,8 +1,22 @@
 Rails.application.routes.draw do
+
+  # resources :cards do
+  # 	collection do
+	 #  	post 'import'
+  # 	end
+  # end
+
+	scope :admin do
+	  resources :cards do
+	  	collection do
+		  	post 'import'
+	  	end
+	  	
+	  end
+	end  
+  
+
   get 'react_app/index'
-
-	resources :cards
-
 	root to: 'react_app#index'
 
 	

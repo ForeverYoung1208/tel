@@ -1,1 +1,46 @@
-<h1>Cards index</h1>
+<p id="notice"><%= notice %></p>
+
+<h1>Cards</h1>
+
+<table class="i-scaffold-table">
+  <thead>
+    <tr>
+      <th>Id</th>
+      <th>Type</th>
+      <th>Name</th>
+      <th>Tel</th>
+      <th>Email</th>
+      <th colspan="2"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @cards.each do |card| %>
+      <tr>
+        <td><%= card.id %></td>
+        <td><%= card.type %></td>
+        <td><%= card.name %></td>
+        <td><%= card.tel %></td>
+        <td><%= card.email %></td>
+        <td><%= link_to 'Edit', edit_card_path(card) %></td>
+        <td><%= link_to 'Destroy', card, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br/>
+
+  <h2>Import Cards from file</h2>
+  <%= form_tag import_cards_path, multipart: true do %>
+    <%= file_field_tag :file %>
+    <%= submit_tag "Import" %>
+  <% end %>
+
+<br/>
+
+<ul>
+  <li> <%= link_to 'New Card', new_card_path %> </li>
+  <br/>
+  <li> <%= link_to 'Back to app', root_path+'#/cards' %> </li>
+</ul>

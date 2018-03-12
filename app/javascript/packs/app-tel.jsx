@@ -30,7 +30,20 @@ class AppTel extends React.Component{
 }
 
 
-document.addEventListener('DOMContentLoaded', () => {
+// document.addEventListener('DOMContentLoaded', () => {
+// 	const app = document.getElementById('app-tel')
+
+// 	if (app){
+// 		ReactDOM.render(
+// 			<HashRouter>
+// 				<AppTel/>
+// 			</HashRouter>
+// 			, app);
+// 	}
+
+// })
+
+$(document).on('turbolinks:load', () => {
 	const app = document.getElementById('app-tel')
 
 	if (app){
@@ -42,4 +55,3 @@ document.addEventListener('DOMContentLoaded', () => {
 	}
 
 })
-

@@ -5,12 +5,6 @@ class CardsController < ApplicationController
   # GET /cards.json
   def index
     @cards = Card.all
-
-    respond_to do |format|
-      format.html { }
-      format.json { }
-    end
-
   end
 
   # GET /cards/1
@@ -34,7 +28,7 @@ class CardsController < ApplicationController
 
     respond_to do |format|
       if @card.save
-        format.html { redirect_to @card, notice: 'Card was successfully created.' }
+        format.html { redirect_to cards_url, notice: 'Card was successfully created.' }
         format.json { render :show, status: :created, location: @card }
       else
         format.html { render :new }
@@ -48,7 +42,7 @@ class CardsController < ApplicationController
   def update
     respond_to do |format|
       if @card.update(card_params)
-        format.html { redirect_to @card, notice: 'Card was successfully updated.' }
+        format.html { redirect_to cards_url, notice: 'Card was successfully updated.' }
         format.json { render :show, status: :ok, location: @card }
       else
         format.html { render :edit }
@@ -67,6 +61,16 @@ class CardsController < ApplicationController
     end
   end
 
+  def import
+
+    res = Card.import(params[:file])
+
+
+    redirect_to cards_url, notice: "import result: #{res}"
+
+  end
+
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_card
@@ -75,6 +79,6 @@ class CardsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def card_params
-      params.fetch(:card, {})
+      params.require(:card).permit(:type, :name, :tel, :email, :file)
     end
 end
