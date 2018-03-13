@@ -11,10 +11,13 @@ Rails.application.routes.draw do
 	  	collection do
 		  	post 'import'
 	  	end
-	  	
 	  end
 	end  
-  
+
+	scope :api do
+	  get 'cards/index', to: 'cards#index', constraints: lambda { |req| req.format == :json }
+	end
+
 
   get 'react_app/index'
 	root to: 'react_app#index'

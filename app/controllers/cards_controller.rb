@@ -4,7 +4,8 @@ class CardsController < ApplicationController
   # GET /cards
   # GET /cards.json
   def index
-    @cards = Card.all
+    p='as'
+    @cards = Card.where("name LIKE :pattern", pattern: "%#{p}%")
   end
 
   # GET /cards/1

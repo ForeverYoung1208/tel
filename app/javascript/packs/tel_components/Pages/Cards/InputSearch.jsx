@@ -1,8 +1,8 @@
 import React from 'react'
-
+import PropTypes from 'prop-types'
 
 export class InputSearch extends React.Component {
-	handleChange(e){
+	handleInputChange = (e) => {
 		const newValue=e.target.value;
 		this.props.inputChanged(newValue)
 	}
@@ -14,9 +14,17 @@ export class InputSearch extends React.Component {
 				  <div className="input-group-prepend">
 				    <span className="input-group-text" id="basic-addon1">Cards search</span>
 				  </div>
-				  <input type="text" className="form-control" placeholder="search pattern" aria-label="Username" aria-describedby="basic-addon1"/>
+				  <input type="text" className="form-control" aria-describedby="basic-addon1" placeholder="search pattern"
+				  	value={this.props.searchPattern} onChange={this.handleInputChange}
+				  />
 				</div>				
 			</div>		
 		)
 	}
+
+}
+
+InputSearch.propTypes = {
+	inputChanged: PropTypes.func.isRequired,
+	searchPattern: PropTypes.string
 }
