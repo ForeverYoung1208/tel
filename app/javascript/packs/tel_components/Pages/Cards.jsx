@@ -6,44 +6,25 @@ export class Cards extends React.Component {
 	constructor(props){
 	 	super(props);
 		this.state = {
-			cards: [{
-					id: 1,
-					type: "type1",
-					name: "name1",
-					tel: "tel1",
-					email: "email1"
-				},
-				{
-					id: 2,
-					type: "type2",
-					name: "name2",
-					tel: "tel2",
-					email: "email2"
-				}
-			],
+			cards: [],
 			searchPattern:''
-		}
+		},
+		this.inputTimer = null;
 	};
 
 	getCardsByPattern = (pattern) =>{
-
 		let url = 'api/cards/index.json?'+ $.param({searchPattern: pattern})
 		console.log(url)
-
-////////
-		
 		// const token = $('meta[name="csrf-token"]').attr('content');
 		const myHeaders = new Headers({
 			// 'X-CSRF-Token': token,
 			'Content-Type': 'application/json'
 		});
-
 		// const payload = {
 		// 	greeting:{ 
 		// 		'text': text
 		// 	}
 		// }
-
 		fetch(
 			url,
 			{
@@ -58,17 +39,29 @@ export class Cards extends React.Component {
 			.then( resj => {
 				console.log( resj )
 				this.setState({cards: resj})
-			})		
-
+			}
+		)
 	}
 
 	componentDidMount = () => {
-		this.getCardsByPattern(this.state.searchPattern)
+		// this.getCardsByPattern(this.state.searchPattern)
 
 	}
 
 	inputChanged = (val) => {
 		this.setState( {searchPattern: val})
+
+		if (val.length>=3) {
+
+			clearTimeout(this.inputTimer)
+			this.inputTimer = setTimeout( () => {
+				this.getCardsByPattern(this.state.searchPattern)
+			}, 1000);
+		
+		} else {
+			clearTimeout(this.inputTimer)
+			this.setState({cards: []})
+		}
 
 	}
 

@@ -4,8 +4,10 @@ class CardsController < ApplicationController
   # GET /cards
   # GET /cards.json
   def index
-    p='as'
-    @cards = Card.where("name LIKE :pattern", pattern: "%#{p}%")
+    p=params['searchPattern']
+    p == '' ? p ='impossible very complex pattern' : p
+    @cards = Card.where("name LIKE :pattern", pattern: "%#{p}%").or(Card.where("email LIKE :pattern", pattern: "%#{p}%"))
+
   end
 
   # GET /cards/1
@@ -80,6 +82,6 @@ class CardsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def card_params
-      params.require(:card).permit(:type, :name, :tel, :email, :file)
+      params.require(:card).permit(:type, :name, :tel, :email, :file, :searchPattern)
     end
 end
