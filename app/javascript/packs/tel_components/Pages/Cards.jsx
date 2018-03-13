@@ -1,5 +1,6 @@
 import React from 'react'
 import { Card } from './Cards/Card'
+import { InputSearch } from './Cards/InputSearch'
 
 export class Cards extends React.Component {
 	constructor(props){
@@ -19,23 +20,22 @@ export class Cards extends React.Component {
 					tel: "tel2",
 					email: "email2"
 				}
-			]
+			],
+			searchPattern:''
 		}
 	};
+
+	inputChanged = (val) => {
+
+	}
+
 
 	render(){
 		return(
 
 			<div className="container-fluid">
-				<div className="search row">
-					<div className="input-group mb-3">
-					  <div className="input-group-prepend">
-					    <span className="input-group-text" id="basic-addon1">Cards search</span>
-					  </div>
-					  <input type="text" className="form-control" placeholder="search pattern" aria-label="Username" aria-describedby="basic-addon1"/>
-					</div>				
-				</div>
 
+				<InputSearch inputChanged={this.inputChanged}/>
 
 				<div className="cards ">
 					{ this.state.cards.map( (card, index) => (
