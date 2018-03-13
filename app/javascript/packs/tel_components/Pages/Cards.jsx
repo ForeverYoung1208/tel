@@ -56,7 +56,7 @@ export class Cards extends React.Component {
 			clearTimeout(this.inputTimer)
 			this.inputTimer = setTimeout( () => {
 				this.getCardsByPattern(this.state.searchPattern)
-			}, 1000);
+			}, 500);
 		
 		} else {
 			clearTimeout(this.inputTimer)
