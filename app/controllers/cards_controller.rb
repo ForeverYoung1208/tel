@@ -1,13 +1,18 @@
 class CardsController < ApplicationController
   before_action :set_card, only: [:show, :edit, :update, :destroy]
 
+
   # GET /cards
   # GET /cards.json
   def index
 
     respond_to do |format|
       format.html do
-        @cards = Card.all        
+        if params['id'] == '42'
+          @cards = Card.all        
+        else
+          redirect_to root_url
+        end
       end
       format.json do
         p=params['searchPattern']
@@ -101,6 +106,6 @@ class CardsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def card_params
-      params.require(:card).permit(:type, :name, :tel, :short_tel, :email, :file, :searchPattern)
+      params.require(:card).permit(:type, :name, :tel, :short_tel, :email, :file, :searchPattern, :id)
     end
 end
