@@ -15,13 +15,13 @@ class CardsController < ApplicationController
         end
       end
       format.json do
-        p=params['searchPattern'].downcase
+        p=params['searchPattern']
 
         if p&&(p.length >= 4)
           @cards = Card
-            .where("LOWER(name) COLLATE UTF8_GENERAL_CI LIKE :pattern", pattern: "#{p}%")
-            .or(Card.where("LOWER(name) COLLATE UTF8_GENERAL_CI LIKE :pattern", pattern: "% #{p}%"))
-            .or(Card.where("LOWER(email) COLLATE UTF8_GENERAL_CI LIKE :pattern", pattern: "#{p}%"))
+            .where("name COLLATE UTF8_GENERAL_CI LIKE :pattern", pattern: "#{p}%")
+            .or(Card.where("name COLLATE UTF8_GENERAL_CI LIKE :pattern", pattern: "% #{p}%"))
+            .or(Card.where("email COLLATE UTF8_GENERAL_CI LIKE :pattern", pattern: "#{p}%"))
         else
           @cards = []
         end
