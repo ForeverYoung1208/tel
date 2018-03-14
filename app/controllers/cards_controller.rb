@@ -15,7 +15,7 @@ class CardsController < ApplicationController
         end
       end
       format.json do
-        p=params['searchPattern']
+        p=params['searchPattern'].gsub!('%',' ').gsub!('_',' ')
 
         if p&&(p.length >= 4)
           @cards = Card
