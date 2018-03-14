@@ -19,9 +19,9 @@ class CardsController < ApplicationController
 
         if p&&(p.length >= 4)
           @cards = Card
-            .where("LOWER(name) LIKE :pattern", pattern: "#{p}%")
-            .or(Card.where("LOWER(name) LIKE :pattern", pattern: "% #{p}%"))
-            .or(Card.where("LOWER(email) LIKE :pattern", pattern: "#{p}%"))
+            .where("LOWER(name) COLLATE UTF8_GENERAL_CI LIKE :pattern", pattern: "#{p}%")
+            .or(Card.where("LOWER(name) COLLATE UTF8_GENERAL_CI LIKE :pattern", pattern: "% #{p}%"))
+            .or(Card.where("LOWER(email) COLLATE UTF8_GENERAL_CI LIKE :pattern", pattern: "#{p}%"))
         else
           @cards = []
         end
