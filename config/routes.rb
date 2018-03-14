@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  devise_for :users
+
   # resources :cards do
   # 	collection do
 	 #  	post 'import'
@@ -12,10 +14,11 @@ Rails.application.routes.draw do
 		  	post 'import'
 	  	end
 	  end
+		resources :users	  
 	end  
 
 	scope :api do
-	  get 'cards/index', to: 'cards#index', constraints: lambda { |req| req.format == :json }
+	  get 'cards/index', to: 'cards#api_index', constraints: lambda { |req| req.format == :json }
 	end
 
 

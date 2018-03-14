@@ -1,18 +1,20 @@
 class CardsController < ApplicationController
+  before_action :authenticate_user!, only: [:show, :edit, :update, :destroy, :index]
   before_action :set_card, only: [:show, :edit, :update, :destroy]
 
 
   # GET /cards
   # GET /cards.json
-  def index
 
+  def index
+    @cards = Card.all        
+  end
+
+  
+  def api_index
     respond_to do |format|
       format.html do
-        if params['id'] == '42'
-          @cards = Card.all        
-        else
-          redirect_to root_url
-        end
+        redirect_to root_url
       end
       format.json do
         p=params['searchPattern'].downcase
@@ -27,14 +29,13 @@ class CardsController < ApplicationController
         else
           @cards = []
         end
-        
       end
-
-      
     end
-
-
   end
+
+
+
+
 
   # GET /cards/1
   # GET /cards/1.json

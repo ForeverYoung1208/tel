@@ -1,5 +1,9 @@
 <p id="notice"><%= notice %></p>
 
+<% if current_user %>
+  <pre> Current user: <%= current_user.email %> <%= link_to 'Logout', destroy_user_session_path, method: :delete %></pre> 
+<% end %>
+
 <h1>Cards</h1>
 
 <table class="i-scaffold-table">
