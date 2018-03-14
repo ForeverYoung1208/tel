@@ -51,7 +51,7 @@ export class Cards extends React.Component {
 	inputChanged = (val) => {
 		this.setState( {searchPattern: val})
 
-		if (val.length>=3) {
+		if (val.length>=4) {
 
 			clearTimeout(this.inputTimer)
 			this.inputTimer = setTimeout( () => {

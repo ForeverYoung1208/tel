@@ -14,10 +14,10 @@ export default class MainMenu extends React.Component {
 				  <div className="collapse navbar-collapse" id="navbarNav">
 				    <ul className="navbar-nav">
 				      <li className="nav-item">
-				        <NavLink className="nav-link" activeClassName='i-active' to="/cards">Show contacts</NavLink>
+				        <NavLink className="nav-link" activeClassName='i-active' to="/cards">Контакты</NavLink>
 				      </li>
 				      <li className="nav-item">
-				        <NavLink className="nav-link" activeClassName='i-active' to="/useful_links">Useful links</NavLink>
+				        <NavLink className="nav-link" activeClassName='i-active' to="/useful_links">Полезные ссылки</NavLink>
 			      </li>
 				    </ul>
 				  </div>

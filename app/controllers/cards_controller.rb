@@ -4,9 +4,28 @@ class CardsController < ApplicationController
   # GET /cards
   # GET /cards.json
   def index
-    p=params['searchPattern']
-    p == '' ? p ='impossible very complex pattern' : p
-    @cards = Card.where("name LIKE :pattern", pattern: "%#{p}%").or(Card.where("email LIKE :pattern", pattern: "%#{p}%"))
+
+    respond_to do |format|
+      format.html do
+        @cards = Card.all        
+      end
+      format.json do
+        p=params['searchPattern']
+
+        if p&&(p.length >= 4)
+          @cards = Card
+            .where("name LIKE :pattern", pattern: "#{p}%")
+            .or(Card.where("name LIKE :pattern", pattern: "% #{p}%"))
+            .or(Card.where("email LIKE :pattern", pattern: "#{p}%"))
+        else
+          @cards = []
+        end
+        
+      end
+
+      
+    end
+
 
   end
 

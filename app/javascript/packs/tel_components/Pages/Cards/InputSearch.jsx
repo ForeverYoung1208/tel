@@ -12,7 +12,7 @@ export class InputSearch extends React.Component {
 			<div className="search row">
 				<div className="input-group mb-3">
 				  <div className="input-group-prepend">
-				    <span className="input-group-text" id="basic-addon1">Cards search</span>
+				    <span className="input-group-text" id="basic-addon1">Поиск :</span>
 				  </div>
 				  <input type="text" className="form-control" aria-describedby="basic-addon1" placeholder="search pattern"
 				  	value={this.props.searchPattern} onChange={this.handleInputChange}
