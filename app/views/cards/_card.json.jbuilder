@@ -1,1 +1,1 @@
-json.extract! card, :id, :name, :type, :email, :tel
+json.extract! card, :id, :name, :type, :email, :tel, :short_tel

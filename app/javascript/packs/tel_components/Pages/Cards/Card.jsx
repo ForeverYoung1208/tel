@@ -12,9 +12,10 @@ export const Card = (props) => {
 				<div className="row"> <span className="col-sm-1 text-sm-right i-label text-nowrap"> Тип: </span> <span className="col-sm-auto">{ card.type }</span> </div>
 */}
 
-				<div className="row"> <span className="col-sm-1 text-sm-right i-label text-nowrap"> Имя: </span> <span className="col-sm-auto">{ card.name }</span> </div>
-				<div className="row"> <span className="col-sm-1 text-sm-right i-label text-nowrap"> Телефон: </span> <span className="col-sm-auto">{ card.tel }</span> </div>
-				<div className="row"> <span className="col-sm-1 text-sm-right i-label text-nowrap"> E-mail: </span> <span className="col-sm-auto">{ card.email }</span> </div>
+				<div className="row"> <span className="col-sm-2 text-sm-right i-label text-nowrap"> Имя: </span> <span className="col-sm-auto">{ card.name }</span> </div>
+				<div className="row"> <span className="col-sm-2 text-sm-right i-label text-nowrap"> Телефон: </span> <span className="col-sm-auto">{ card.tel }</span> </div>
+				<div className="row"> <span className="col-sm-2 text-sm-right i-label text-nowrap"> Внутр.Тел.: </span> <span className="col-sm-auto">{ card.short_tel }</span> </div>
+				<div className="row"> <span className="col-sm-2 text-sm-right i-label text-nowrap"> E-mail: </span> <span className="col-sm-auto">{ card.email }</span> </div>
 			</div>
 		</div>
 	)

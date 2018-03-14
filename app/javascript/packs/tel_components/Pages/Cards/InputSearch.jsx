@@ -14,7 +14,7 @@ export class InputSearch extends React.Component {
 				  <div className="input-group-prepend">
 				    <span className="input-group-text" id="basic-addon1">Поиск :</span>
 				  </div>
-				  <input type="text" className="form-control" aria-describedby="basic-addon1" placeholder="search pattern"
+				  <input type="text" className="form-control" aria-describedby="basic-addon1" placeholder="минимум 4 символа для поиска"
 				  	value={this.props.searchPattern} onChange={this.handleInputChange}
 				  />
 				</div>				

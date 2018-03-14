@@ -9,6 +9,7 @@
       <th>Type</th>
       <th>Name</th>
       <th>Tel</th>
+      <th>Short_tel</th>
       <th>Email</th>
       <th colspan="2"></th>
     </tr>
@@ -21,6 +22,7 @@
         <td><%= card.type %></td>
         <td><%= card.name %></td>
         <td><%= card.tel %></td>
+        <td><%= card.short_tel %></td>
         <td><%= card.email %></td>
         <td><%= link_to 'Edit', edit_card_path(card) %></td>
         <td><%= link_to 'Destroy', card, method: :delete, data: { confirm: 'Are you sure?' } %></td>
