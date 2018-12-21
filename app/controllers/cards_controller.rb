@@ -26,6 +26,8 @@ class CardsController < ApplicationController
             .where("LOWER(name)  LIKE :pattern", pattern: "#{p}%")
             .or(Card.where("LOWER(name)  LIKE :pattern", pattern: "% #{p}%"))
             .or(Card.where("LOWER(email)  LIKE :pattern", pattern: "#{p}%"))
+            .or(Card.where("LOWER(short_tel)  LIKE :pattern", pattern: "#{p}%"))
+            .or(Card.where("LOWER(tel)  LIKE :pattern", pattern: "#{p}%"))
         else
           @cards = []
         end

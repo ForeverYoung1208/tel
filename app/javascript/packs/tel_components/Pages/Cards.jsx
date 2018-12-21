@@ -2,12 +2,29 @@ import React from 'react'
 import { Card } from './Cards/Card'
 import { InputSearch } from './Cards/InputSearch'
 
+const Spinner = ()=>{
+	return(
+		<div id="circle">
+		  <div className="loader">
+		    <div className="loader">
+		        <div className="loader">
+		           <div className="loader">
+
+		           </div>
+		        </div>
+		    </div>
+		  </div>
+		</div> 
+	)
+}
+
 export class Cards extends React.Component {
 	constructor(props){
 	 	super(props);
 		this.state = {
 			cards: [],
-			searchPattern:''
+			searchPattern:'',
+			showPlaceholder: false
 		},
 		this.inputTimer = null;
 	};
@@ -37,8 +54,8 @@ export class Cards extends React.Component {
 				return res.json()
 			})
 			.then( resj => {
-				console.log( resj )
-				this.setState({cards: resj})
+
+				this.setState({cards: resj, showPlaceholder: false})
 			}
 		)
 	}
@@ -56,6 +73,7 @@ export class Cards extends React.Component {
 			clearTimeout(this.inputTimer)
 			this.inputTimer = setTimeout( () => {
 				this.getCardsByPattern(this.state.searchPattern)
+				this.setState({showPlaceholder: true})
 			}, 500);
 		
 		} else {
@@ -80,7 +98,7 @@ export class Cards extends React.Component {
 						)
 					}
 				</div>
-				
+				{this.state.showPlaceholder ? <Spinner/> : <div></div> }
 			</div>
 
 		)
