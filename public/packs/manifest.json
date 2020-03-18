@@ -1,18 +1,18 @@
 {
-  "app-tel.js": "/packs/app-tel-e2ba6ea1af26a714c438.js",
-  "app-tel.js.map": "/packs/app-tel-e2ba6ea1af26a714c438.js.map",
+  "app-tel.js": "/packs/app-tel-97e519e4665cb3b3fbc8.js",
+  "app-tel.js.map": "/packs/app-tel-97e519e4665cb3b3fbc8.js.map",
   "hello_react.js": "/packs/hello_react-c56bb609a4900da23750.js",
   "hello_react.js.map": "/packs/hello_react-c56bb609a4900da23750.js.map",
   "tel_components/MainMenu.js": "/packs/tel_components/MainMenu-175e6ba1f267f44306f4.js",
   "tel_components/MainMenu.js.map": "/packs/tel_components/MainMenu-175e6ba1f267f44306f4.js.map",
-  "tel_components/Pages.js": "/packs/tel_components/Pages-e653838187d913b3bc10.js",
-  "tel_components/Pages.js.map": "/packs/tel_components/Pages-e653838187d913b3bc10.js.map",
+  "tel_components/Pages.js": "/packs/tel_components/Pages-f57dfb2cea086cc0c829.js",
+  "tel_components/Pages.js.map": "/packs/tel_components/Pages-f57dfb2cea086cc0c829.js.map",
   "tel_components/Pages/Cards.js": "/packs/tel_components/Pages/Cards-77e5a3cd1f6c32391c26.js",
   "tel_components/Pages/Cards.js.map": "/packs/tel_components/Pages/Cards-77e5a3cd1f6c32391c26.js.map",
   "tel_components/Pages/Cards/Card.js": "/packs/tel_components/Pages/Cards/Card-9213258634eea9411d24.js",
   "tel_components/Pages/Cards/Card.js.map": "/packs/tel_components/Pages/Cards/Card-9213258634eea9411d24.js.map",
   "tel_components/Pages/Cards/InputSearch.js": "/packs/tel_components/Pages/Cards/InputSearch-4b37de00cd7b3336e2b8.js",
   "tel_components/Pages/Cards/InputSearch.js.map": "/packs/tel_components/Pages/Cards/InputSearch-4b37de00cd7b3336e2b8.js.map",
-  "tel_components/Pages/UsefulLinks.js": "/packs/tel_components/Pages/UsefulLinks-c608bb659c233db23ba4.js",
-  "tel_components/Pages/UsefulLinks.js.map": "/packs/tel_components/Pages/UsefulLinks-c608bb659c233db23ba4.js.map"
+  "tel_components/Pages/UsefulLinks.js": "/packs/tel_components/Pages/UsefulLinks-4088dcc858d04be29047.js",
+  "tel_components/Pages/UsefulLinks.js.map": "/packs/tel_components/Pages/UsefulLinks-4088dcc858d04be29047.js.map"
 }
